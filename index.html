@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codepen clone</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./lib/codemirror.css" />
+    <link rel="stylesheet" href="./lib/theme/monokai.css" />
+    <link rel="stylesheet" href="./lib/addon/hint/show-hint.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Web Editor</h1>
+      <button id="hint-toggler">SHOW HINT</button>
+    </header>
+
+    <main id="app">
+      <div class="code">
+        <textarea
+          class="CodeMirror"
+          id="htmlCode"
+          placeholder="HTML Code goes here..."
+        ></textarea>
+        <textarea
+          class="CodeMirror"
+          id="cssCode"
+          placeholder="CSS Code goes here..."
+        ></textarea>
+        <textarea
+          class="CodeMirror"
+          id="javascriptCode"
+          placeholder="JavaScript Code goes here..."
+        ></textarea>
+      </div>
+      <iframe
+        id="view"
+        sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+      ></iframe>
+    </main>
+
+    <script src="./lib/codemirror.js "></script>
+    <script src="./lib/addon/edit/closebrackets.js"></script>
+    <script src="./lib/addon/edit/closetag.js"></script>
+    <script src="./lib/addon/fold/xml-fold.js"></script>
+    <script src="./lib/mode/xml/xml.js"></script>
+    <script src="./lib/mode/css/css.js"></script>
+    <script src="./lib/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="./lib/mode/javascript/javascript.js"></script>
+    <script src="./lib/addon/display/placeholder.js"></script>
+    <script src="./lib/addon/hint/show-hint.js"></script>
+    <script src="./lib/addon/hint/javascript-hint.js"></script>
+    <script src="./lib/addon/hint/css-hint.js"></script>
+    <script src="./js/app.js"></script>
+    <script>
+      const btn = document.getElementById("hint-toggler");
+      const modal = document.getElementById("hint-container");
+
+      btn.onclick = () => {
+        alert("Ctrl + space for sugguestions ;)");
+      };
+    </script>
+  </body>
+</html>

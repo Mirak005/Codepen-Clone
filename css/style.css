@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: #262626;
+}
+
+header h1 {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#hint-toggler {
+  outline: 0;
+  cursor: pointer;
+  background-color: rgb(28, 124, 202);
+  border: none;
+  padding: 0.5rem;
+  color: white;
+  border-radius: 3px;
+  transition: 0.3s linear;
+}
+
+#hint-toggler:hover {
+  transform: translateY(-2px);
+}
+
+#app {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+#view {
+  flex-basis: 50%;
+  resize: both;
+}
+
+.code {
+  overflow-y: scroll;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.code > textarea {
+  border: 1px solid #eee;
+  resize: vertical;
+  width: 100%;
+  padding: 1rem;
+  height: 33%;
+}
+
+.CodeMirror {
+  border: 1px solid #eee;
+  resize: vertical;
+}
